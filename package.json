@@ -14,9 +14,17 @@
     "fix": "run-s -l -c fix:eslint fix:prettier",
     "fix:eslint": "eslint --fix src/**/*.ts",
     "fix:prettier": "prettier --write .",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "prisma db seed --preview-feature",
+    "prisma:dev": "run-s -l prisma:generate prisma:migrate prisma:seed"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/jest": "^28.1.1",
     "@types/node": "^17.0.41",
@@ -38,6 +46,7 @@
   },
   "dependencies": {
     "@prisma/client": "3.15.1",
+    "cors": "^2.8.5",
     "express": "^4.18.1"
   }
 }

@@ -4,14 +4,6 @@
         "outDir": "./dist",
         "resolveJsonModule": true,
         "baseUrl": "./",
-        "paths": {
-            "@src/*": [
-                "src/*"
-            ],
-            "@assets/*": [
-                "assets/*"
-            ]
-        },
     },
     "include": [
         "src/**/*.ts",
