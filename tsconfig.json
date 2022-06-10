@@ -1,0 +1,23 @@
+{
+    "extends": "@tsconfig/node14/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "resolveJsonModule": true,
+        "baseUrl": "./",
+        "paths": {
+            "@src/*": [
+                "src/*"
+            ],
+            "@assets/*": [
+                "assets/*"
+            ]
+        },
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.js"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
